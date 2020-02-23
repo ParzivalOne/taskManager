@@ -132,6 +132,7 @@ class _HomeState extends State<Home> {
               },),
               duration: Duration(milliseconds: 2500),
             );
+            Scaffold.of(context).removeCurrentSnackBar(); // fix snackbar stack bug
             Scaffold.of(context).showSnackBar(snack);
           });
         },
